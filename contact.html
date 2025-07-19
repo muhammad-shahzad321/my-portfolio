@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Muhammad Shahzad</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <h1 class="logo">Muhammad <span>Shahzad</span></h1>
+    <nav id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-grid">
+
+      <div class="contact-box">
+        <i class="fas fa-phone"></i>
+        <h3>Call Me</h3>
+        <p><a href="tel:03131182384">0313-1182384</a></p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fab fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/923131182384" target="_blank">0313-1182384</a></p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fab fa-facebook"></i>
+        <h3>Facebook</h3>
+        <p><a href="https://web.facebook.com/muhammad.shahzad.789272" target="_blank">Visit Profile</a></p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p><a href="mailto:abubakarumarfarooq49@gmail.com">abubakarumarfarooq49@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Muhammad Shahzad | All Rights Reserved</p>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

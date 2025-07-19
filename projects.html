@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Muhammad Shahzad</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <h1 class="logo">Muhammad <span>Shahzad</span></h1>
+    <nav id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="projects.html" class="active"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="projects-section">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-box">
+        <h3>Rent A Car Website</h3>
+        <p>HTML & CSS based responsive Rent a Car booking website.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Cake Website</h3>
+        <p>HTML & CSS based modern cake shop website design.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Python Calculator</h3>
+        <p>A simple calculator created using Python.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Generate ID Card</h3>
+        <p>Python program to generate ID cards with user details.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Chess Board</h3>
+        <p>Python-based chess board pattern generator.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Student Record System</h3>
+        <p>C language project to add, update, and manage student records.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>C Language Calculator</h3>
+        <p>A basic calculator implemented in C language.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Swap Highest & Lowest Value</h3>
+        <p>C program to swap highest and lowest values in an array.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Muhammad Shahzad | All Rights Reserved</p>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
