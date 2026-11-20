@@ -6,7 +6,6 @@
   <title>Muhammad Shahzad - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
@@ -28,10 +27,10 @@
   </div>
 </header>
 
-<!-- ======== Hero Section ======== -->
+<!-- ======== Hero Section (Typing Animation Added) ======== -->
 <section class="hero">
   <div class="container hero-content">
-    <h2>Hi, I'm <span>Muhammad Shahzad</span></h2>
+    <h2><span class="typing"></span></h2>
     <p>A passionate Web & Software Developer. I create clean, modern and responsive websites & applications.</p>
     <a href="projects.html" class="btn">View My Projects</a>
   </div>
@@ -40,6 +39,17 @@
 <footer>
   <p>© 2025 Muhammad Shahzad | All Rights Reserved</p>
 </footer>
+
+<!-- ======== Scripts ======== -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typed = new Typed(".typing", {
+    strings: ["Hi There, I'm Muhammad Shahzad", "I am a Web Developer", "I am a Beginner Python Programmer",  "I am a Beginner C Language Programmer"],
+    typeSpeed: 70,
+    backSpeed: 60,
+    loop: true
+  });
+</script>
 
 <script>
   const menuToggle = document.getElementById('menu-toggle');

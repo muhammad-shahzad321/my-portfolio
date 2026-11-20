@@ -356,3 +356,14 @@ footer {
 .contact-form button:hover {
   background: #0056b3;
 }
+
+
+.typing {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}

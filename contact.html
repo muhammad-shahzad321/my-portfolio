@@ -44,25 +44,28 @@
       </div>
 
       <div class="contact-box">
-        <i class="fab fa-facebook"></i>
-        <h3>Facebook</h3>
-        <p><a href="https://web.facebook.com/muhammad.shahzad.789272" target="_blank">Visit Profile</a></p>
+        <i class="fab fa-linkedin"></i>
+        <h3>LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/muhammad-shahzad-26a8522a4/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bq9FaT%2F0mRwGpOap%2BvpoL9A%3D%3D" target="_blank">Visit Profile</a></p>
       </div>
 
       <div class="contact-box">
         <i class="fas fa-envelope"></i>
         <h3>Email</h3>
-        <p><a href="mailto:abubakarumarfarooq49@gmail.com">abubakarumarfarooq49@gmail.com</a></p>
+        <p><a href="mailto:muhamad.shahzad.1989@gmail.com">muhamad.shahzad.1989@gmail.com</a></p>
       </div>
 
     </div>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4" required></textarea>
+    <!-- ===== Contact Form (Backend Connected) ===== -->
+    <form class="contact-form" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+
+    <p id="responseMessage" style="color: green; font-weight: bold; display:none;"></p>
   </div>
 </section>
 
@@ -76,6 +79,29 @@
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+</script>
+
+<!-- ===== Form Submit Script ===== -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const message = e.target.message.value;
+
+  const response = await fetch("http://localhost:5000/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, message })
+  });
+
+  const result = await response.text();
+  document.getElementById("responseMessage").innerText = result;
+  document.getElementById("responseMessage").style.display = "block";
+
+  e.target.reset();
+});
 </script>
 
 </body>
